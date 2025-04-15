@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(33, 37, 41)
+}
+
+main {
+  background-color: #2a2a2a;
+}
+
+header, footer {
+  background-color: #343a40;
+  color: white;
+}

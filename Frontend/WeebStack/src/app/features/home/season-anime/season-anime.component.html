@@ -1,0 +1,9 @@
+<div class="anime-list">
+  <h2>Printemps 2025</h2>
+  <ul>
+    <li *ngFor="let anime of seasonAnime">
+      <img [src]="anime.images.jpg.image_url" alt="{{ anime.title }}" />
+      <p>{{ anime.title }}</p>
+    </li>
+  </ul>
+</div>

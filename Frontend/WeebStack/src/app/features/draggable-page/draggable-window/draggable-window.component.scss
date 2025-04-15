@@ -1,0 +1,21 @@
+.draggable-window {
+  width: 200px;
+  height: 150px;
+  background-color: #343a40;
+  color: white;
+  border: 1px solid #495057;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+
+  .header {
+    background-color: #495057;
+    padding: 0.5rem;
+    cursor: grab;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}

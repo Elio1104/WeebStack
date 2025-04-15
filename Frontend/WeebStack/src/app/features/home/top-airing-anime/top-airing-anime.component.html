@@ -1,0 +1,9 @@
+<div class="anime-list">
+  <h2>Top 10 Animés en cours</h2>
+  <ul>
+    <li *ngFor="let anime of topAiringAnime">
+      <img [src]="anime.images.jpg.image_url" alt="{{ anime.title }}" />
+      <p>{{ anime.title }}</p>
+    </li>
+  </ul>
+</div>
