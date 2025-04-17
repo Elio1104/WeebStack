@@ -21,8 +21,4 @@ export class NavbarComponent {
   toggleCollapse() : void {
     this.changeIsLeftSidebarCollapsed.emit(!this.isLeftSidebarCollapsed());
   }
-
-  closeSidenav() : void {
-    this.changeIsLeftSidebarCollapsed.emit(true);
-  }
 }

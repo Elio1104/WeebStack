@@ -21,4 +21,8 @@ export class JikanService {
   getAnimeBySeasons(year : number, season : string): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}seasons/${year}/${season}`);
   }
+
+  getAnimeDetails(malId: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}anime/${malId}`);
+  }
 }

@@ -15,10 +15,6 @@ export class AppComponent {
   screenWidth = signal<number>(window.innerWidth);
   title = 'WeebStack';
 
-  OnInit() : void {
-    this.isLeftSidebarCollapsed.set(true);
-  }
-
   @HostListener('window:resize')
   onResize() : void {
     this.screenWidth.set(window.innerWidth);

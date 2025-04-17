@@ -2,8 +2,10 @@
   <h2>{{ title }}</h2>
   <ul>
     <li *ngFor="let anime of displayedAnime">
-      <img [src]="anime.images.jpg.image_url" alt="{{ anime.title }}" />
-      <p>{{ anime.title }}</p>
+      <a [routerLink]="'/anime/' + anime.mal_id">
+        <img [src]="anime.images.jpg.image_url" alt="{{ anime.title }}" />
+        <p>{{ anime.title }}</p>
+      </a>
     </li>
   </ul>
   <div class="pagination">

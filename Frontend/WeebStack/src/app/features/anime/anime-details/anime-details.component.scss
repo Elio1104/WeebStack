@@ -1,0 +1,29 @@
+.anime-details {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+
+  h1, h2, h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #00bcd4;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.anime-image {
+  width: 200px;
+  border-radius: 29px;
+  background: #292e32;
+  box-shadow:  7px 7px 5px #1a1d20,
+  -7px -7px 5px #383f45;
+}

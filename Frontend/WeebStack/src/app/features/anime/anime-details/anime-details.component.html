@@ -1,0 +1,49 @@
+<div *ngIf="animeDetails" class="anime-details" style="color: white; padding: 20px;">
+  <!-- Image principale -->
+  <div class="anime-header" style="display: flex; align-items: center; gap: 20px;">
+    <img class="anime-image" [src]="animeDetails.images.jpg.large_image_url" alt="{{ animeDetails.title }}" />
+    <div>
+      <h1>{{ animeDetails.title_english || animeDetails.title }}</h1>
+      <h2 style="font-weight: normal; color: gray;">{{ animeDetails.title_japanese }}</h2>
+    </div>
+  </div>
+
+  <!-- Informations principales -->
+  <div class="anime-info" style="margin-top: 20px;">
+    <p><strong>Type :</strong> {{ animeDetails.type }}</p>
+    <p><strong>Source :</strong> {{ animeDetails.source }}</p>
+    <p><strong>Nombre d'épisodes :</strong> {{ animeDetails.episodes || 'Non spécifié' }}</p>
+    <p><strong>Statut :</strong> {{ animeDetails.status }}</p>
+    <p><strong>Diffusion :</strong> {{ animeDetails.broadcast?.string || 'Non spécifié' }}</p>
+    <p><strong>Durée :</strong> {{ animeDetails.duration }}</p>
+    <p><strong>Score :</strong> {{ animeDetails.score || 'Non noté' }} (par {{ animeDetails.scored_by || 0 }} utilisateurs)</p>
+    <p><strong>Popularité :</strong> #{{ animeDetails.popularity }}</p>
+    <p><strong>Classement :</strong> #{{ animeDetails.rank || 'Non classé' }}</p>
+  </div>
+
+  <!-- Synopsis -->
+  <div class="anime-synopsis" style="margin-top: 20px;">
+    <h3>Synopsis</h3>
+    <p>{{ animeDetails.synopsis || 'Aucun synopsis disponible.' }}</p>
+  </div>
+
+  <!-- Genres -->
+  <div class="anime-genres" style="margin-top: 20px;">
+    <h3>Genres</h3>
+    <ul style="list-style: none; padding: 0;">
+      <li *ngFor="let genre of animeDetails.genres" style="display: inline-block; margin-right: 10px; background: #444; padding: 5px 10px; border-radius: 5px;">
+        {{ genre.name }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Studios -->
+  <div class="anime-studios" style="margin-top: 20px;">
+    <h3>Studios</h3>
+    <ul style="list-style: none; padding: 0;">
+      <li *ngFor="let studio of animeDetails.studios" style="margin-bottom: 5px;">
+        <a [href]="studio.url" target="_blank" style="color: #00bcd4;">{{ studio.name }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
