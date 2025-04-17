@@ -1,4 +1,4 @@
-html, body {
+html{
   height: 100%;
   margin: 0;
   display: flex;
@@ -10,7 +10,23 @@ main {
   background-color: #2a2a2a;
 }
 
-header, footer {
-  background-color: #343a40;
-  color: white;
+.body {
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
+  z-index: 0;
+  position: relative;
+  top: 0;
+  transition: all 0.5s ease;
+  padding: 3rem;
+  background-color: #2a2a2a;
+}
+
+.body-trimmed {
+  width: calc(100% - 16.5625rem);
+  margin-left: 16.5625rem;
+}
+
+.body-md-screen {
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
 }
