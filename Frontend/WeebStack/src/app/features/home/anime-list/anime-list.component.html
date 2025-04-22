@@ -3,11 +3,25 @@
   <ul>
     <li *ngFor="let anime of displayedAnime">
       <a [routerLink]="'/anime/' + anime.mal_id">
-        <img [src]="anime.images.jpg.image_url" alt="{{ anime.title }}" />
-        <p>{{ anime.title }}</p>
+        <img [src]="anime.images.jpg.image_url" class="card-img" alt="{{ anime.title }}" />
+        <div class="info card-img-overlay">
+          <div class="status">{{ anime.status }}</div>
+        </div>
+        <div class="info">
+          <p class="title">{{ anime.title }}</p>
+          <p class="details">{{ anime.episodes }} episodes</p>
+          <p class="score">
+            ⭐ {{ anime.score }}
+            <span class="ranking">#{{ anime.rank }}</span>
+          </p>
+          <div class="genres">
+            <span *ngFor="let genre of anime.genres">{{ genre.name }}</span>
+          </div>
+        </div>
       </a>
     </li>
   </ul>
+
   <div class="pagination">
     <button (click)="previous()">◀ Précédent</button>
     <button (click)="next()">Suivant ▶</button>

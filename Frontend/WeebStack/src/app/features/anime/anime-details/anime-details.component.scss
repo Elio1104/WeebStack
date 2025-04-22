@@ -1,29 +1,36 @@
 .anime-details {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+  .anime-image {
+    max-width: 90%;
+    border-radius: 29px;
+    background: #292e32;
+    box-shadow:  7px 7px 5px #1a1d20,
+    -7px -7px 5px #383f45;
+  }
 
-  h1, h2, h3 {
+  .card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-header {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .row {
+    align-items: flex-start; /* Aligne les éléments en haut */
+  }
+
+  h1, h2 {
     margin: 0;
   }
 
-  p {
-    margin: 5px 0;
+  h2 {
+    color: #b0b3b8;
   }
 
-  a {
-    text-decoration: none;
-    color: #00bcd4;
+  .card {
+    margin-top: 1rem;
   }
-
-  a:hover {
-    text-decoration: underline;
-  }
-}
-
-.anime-image {
-  width: 200px;
-  border-radius: 29px;
-  background: #292e32;
-  box-shadow:  7px 7px 5px #1a1d20,
-  -7px -7px 5px #383f45;
 }
